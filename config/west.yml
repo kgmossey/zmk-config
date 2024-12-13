@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: kgmossey
-      revision: fix/split-locality
+      revision: master
       import: app/west.yml
   self:
     path: config

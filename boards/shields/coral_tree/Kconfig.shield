@@ -1,0 +1,8 @@
+# Copyright (c) 2024 Kevin Mossey
+# SPDX-License-Identifier: MIT
+
+config SHIELD_CORAL_TREE_LEFT
+    def_bool $(shields_list_contains,coral_tree_left)
+
+config SHIELD_CORAL_TREE_RIGHT
+    def_bool $(shields_list_contains,coral_tree_right)

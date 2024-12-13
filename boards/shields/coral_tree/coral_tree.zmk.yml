@@ -1,0 +1,14 @@
+file_format: "1"
+id: coral_tree
+name: Coral Tree
+type: shield
+url: https://github.com/foostan/crkbd/
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - underglow
+siblings:
+  - coral_tree_left
+  - coral_tree_right

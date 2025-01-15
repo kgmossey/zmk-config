@@ -47,7 +47,7 @@ nice_view_spi: &spi0 {
     cs-gpios = <&pro_micro 19 GPIO_ACTIVE_LOW>;
 };
 
-&spi3 {
+ws2812_spi: &spi3 {
     compatible = "nordic,nrf-spim";
     status = "okay";
     pinctrl-0 = <&spi3_default>;
@@ -58,7 +58,7 @@ nice_view_spi: &spi0 {
         compatible = "worldsemi,ws2812-spi";
 
         /* SPI */
-        reg = <0>; /* ignored, but necessary for SPI bindings */
+        reg = <1>; /* ignored, but necessary for SPI bindings */
         spi-max-frequency = <4000000>;
 
         /* WS2812 */

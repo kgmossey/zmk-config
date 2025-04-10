@@ -22,9 +22,10 @@
    // &kp SQT  
    bindings = <
    &rgb_ug RGB_COLOR_HSB(128,100,100) &kp COMMA &kp DOT  &kp P &kp Y   /**/  &kp F     &kp G  &kp C    &kp R &kp L   
-   &kp A          &kp O     &kp E     &kp U &kp I       /**/  &kp D     &kp H  &kp T    &kp N &kp S
-   &kp SEMI       &kp Q     &kp J     &kp K &kp BT_CLR  /**/  &kp B     &kp M  &kp W    &kp V &kp Z
-                            &kp LGUI  &mo 1 &kp RET     /**/  &kp SPACE &mo 2  &kp RALT                        >;
+   &kp A    &kp O     &kp E    &kp U &kp I   /**/  &kp D     &kp H  &kp T    &kp N &kp S
+   &kp SEMI &kp Q     &kp J    &kp K &kp X   /**/  &kp B     &kp M  &kp W    &kp V &kp Z
+                      &kp LGUI &mo 1 &kp RET /**/  &kp SPACE &mo 2  &kp RALT
+                        >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------

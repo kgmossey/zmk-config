@@ -16,7 +16,7 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
+            tapping_term_ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -51,7 +51,6 @@
 // |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  | 
 //             | Tab | Bck | SPC |   | To2 | Spc | Ret |
    bindings = <
-//            &mt comma_qmark QMARK   &ht dot_excl DOT 
 AS(SQT)       &comma_qmark &dot_excl    &kp P       &kp Y  /**/  &kp F &kp G       &kp C       &kp R         &kp L
 &hm LSHIFT A  &hm LCTL O   &hm LALT E   &hm LMETA U &kp I  /**/  &kp D &hm RMETA H &hm RALT T  &hm RCTL N    &hm RSHIFT S
 &kp SEMI      &kp Q        &kp J        &kp K       &kp X  /**/  &kp B &kp M       &kp W       &kp V         &kp Z
@@ -60,10 +59,10 @@ AS(SQT)       &comma_qmark &dot_excl    &kp P       &kp Y  /**/  &kp F &kp G    
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  1  |  2    |  3   |  4  |  5  | /**/ |  6  |  7  |  8  |  9  |  0   |
-// | BT1 | BT2   | BT3  | BT4 | BT5 | /**/ | LFT | DWN |  UP | RGT | BSPC |
-// | TAB | BTCLR | SHFT |     |     | /**/ |     |     |     |     |      |
-//               | GUI  |     | SPC | /**/ | ENT |     | ALT |
+// | ESC | GRV |  W  |  E  | p_u | /**/ |  *  |  7  |  8  |  9  |  -  |
+// | TAB |  A  |  S  |  D  | p_d | /**/ |  /  |  4  |  5  |  6  |  +  |
+// | TAB | BTC | BT0 | BT1 | BT3 | /**/ |  =  |  1  |  2  |  3  |  0  |
+//             | non | trn | to0 | /**/ |  .  | trn | RET |
                         bindings = <
 &kp ESC	    &kp GRAVE	    &kp W	        &kp E	        &kp PG_UP	  /**/	&kp STAR	&kp 7	&kp 8	&kp 9	&kp MINUS
 &kp TAB	    &kp A	        &kp S	        &kp D	        &kp PG_DN	  /**/	&kp FSLH	&kp 4	&kp 5	&kp 6	&kp PLUS
@@ -74,10 +73,10 @@ AS(SQT)       &comma_qmark &dot_excl    &kp P       &kp Y  /**/  &kp F &kp G    
                    
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  !  |  @  |  #  |  $  |  %  | /**/ |  ^  |  &  |  *  |  (  |  )  |
+// | TAB |  [  |  ]  |  {  |  }  | /**/ |  F1 |  F2 |  F3 |  F4 |  F5 |
+// | non |  -  |  _  |  <  |  >  | /**/ |  F6 |  F7 |  F8 |  F0 | F10 |
+//             | non | trn | non | /**/ | to0 | trn |  ~  |
                         bindings = <
 &kp EXCL    &kp AT	    &kp HASH	&kp DOLLAR	&kp PERCENT		&kp CARET	&kp AMPS	&kp STAR	&kp LPAR	&kp RPAR
 &kp TAB     &kp LBKT	&kp RBKT	&kp LBRC	&kp RBRC		&kp F1	    &kp F2	    &kp F3	    &kp F4	    &kp F5

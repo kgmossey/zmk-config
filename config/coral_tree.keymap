@@ -62,10 +62,10 @@
 // | TAB | BTCLR | SHFT |     |     | /**/ |     |     |     |     |      |
 //               | GUI  |     | SPC | /**/ | ENT |     | ALT |
                         bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5        /**/  &kp N6    &kp N7   &kp N8   &kp N9    &kp N0 
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  /**/  &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &kp BSPC
-   &kp TAB      &bt BT_CLR   &kp LSHIFT   &trans       &kp I         /**/  &trans    &trans   &trans   &trans    &trans 
-                             &kp LGUI     &mo 0        &trans        /**/  &kp SPACE &trans   &kp RALT
+&kp ESC	    &kp GRAVE	&kp W	    &kp E	    &kp PG_UP		&kp STAR	&kp 7	&kp 8	&kp 9	&kp MINUS
+&kp TAB	    &kp A	    &kp S	    &kp D	    &kp PG_DOWN		&kp FSLH	&kp 4	&kp 5	&kp 6	&kp PLUS
+&bt BT_CLR 	&bt SEL 0	&bt SEL 1	&bt SEL 2	&bt SEL 3		&kp EQUAL	&kp 1	&kp 2	&kp 3	&kp 0
+    		            &none	    &trans	    &to 1		    &kp DOT	    &trans	&kp RET		
                         >;
                 };
                    

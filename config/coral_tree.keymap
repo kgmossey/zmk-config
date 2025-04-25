@@ -51,8 +51,8 @@
 // |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | 
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
    bindings = <
-&none          &ht comma_qmark QMARK   &ht dot_excl DOT  &kp P       &kp Y    &kp F &kp G       &kp C       &kp R &kp L
-//AS(SQT)
+&none          &none &none &kp P       &kp Y    &kp F &kp G       &kp C       &kp R &kp L
+//AS(SQT) &ht comma_qmark QMARK   &ht dot_excl DOT 
 //&none	&none	&none	&none	&none		&none	&none	&none	&none	&none
 &hm LSHIFT A     &hm LCTL O              &hm LALT E        &hm LMETA I &kp U    &kp D &hm RMETA H &hm RALT T  &hm RCTL N      &hm RSHIFT S
 &kp SEMI         &kp Q                   &kp J             &kp K       &kp X    &kp B &kp M       &kp W       &kp V &kp Z

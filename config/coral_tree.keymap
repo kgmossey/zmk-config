@@ -26,6 +26,12 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+        dot_excl: dot_exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";

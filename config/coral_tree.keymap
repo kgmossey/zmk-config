@@ -51,9 +51,8 @@
 // |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | 
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
    bindings = <
-AS(SQT)          &none &none &kp P       &kp Y    &kp F &kp G       &kp C       &kp R &kp L
+AS(SQT)          &comma_qmark &none &kp P       &kp Y    &kp F &kp G       &kp C       &kp R &kp L
 //AS(SQT) &ht comma_qmark QMARK   &ht dot_excl DOT 
-//&none	&none	&none	&none	&none		&none	&none	&none	&none	&none
 &hm LSHIFT A     &hm LCTL O              &hm LALT E        &hm LMETA I &kp U    &kp D &hm RMETA H &hm RALT T  &hm RCTL N      &hm RSHIFT S
 &kp SEMI         &kp Q                   &kp J             &kp K       &kp X    &kp B &kp M       &kp W       &kp V &kp Z
                                          &kp TAB           &kp BSPC    &to 1    &to 2 &kp SPACE   &kp RET     
@@ -66,11 +65,8 @@ AS(SQT)          &none &none &kp P       &kp Y    &kp F &kp G       &kp C       
 // | TAB | BTCLR | SHFT |     |     | /**/ |     |     |     |     |      |
 //               | GUI  |     | SPC | /**/ | ENT |     | ALT |
                         bindings = <
-//&none	&none	&none	&none	&none		&none	&none	&none	&none	&none
 &kp ESC	    &kp GRAVE	    &kp W	        &kp E	        &kp PG_UP		&kp STAR	&kp 7	&kp 8	&kp 9	&kp MINUS
-//&none	&none	&none	&none	&none		&none	&none	&none	&none	&none
 &kp TAB	    &kp A	        &kp S	        &kp D	        &kp PG_DN		&kp FSLH	&kp 4	&kp 5	&kp 6	&kp PLUS
-//&none	&none	&none	&none	&none		&none	&none	&none	&none	&none
 &bt BT_CLR 	&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&kp EQUAL	&kp 1	&kp 2	&kp 3	&kp 0
     		                &none	        &trans	        &to 0		    &kp DOT	    &trans	&kp RET		
                         >;

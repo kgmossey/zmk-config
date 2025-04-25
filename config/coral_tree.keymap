@@ -51,7 +51,7 @@
 // |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  | 
 //             | Tab | Bck | SPC |   | To2 | Spc | Ret |
    bindings = <
-AS(SQT)	&kp COMMA	&kp DOT	&kp P	&kp Y		&kp F	&kp G	&kp C	&kp R	&kp L
+AS(SQT)	&comma_qmark	&dot_excl	&kp P	&kp Y		&kp F	&kp G	&kp C	&kp R	&kp L
 &hm LSHIFT A	&hm LCTL O	&hm LALT E	&hm LMETA U	&kp I		&kp D	&hm RMETA H	&hm RALT T	&hm RCTL N	&hm RSHIFT S
 &kp SEMI	&kp Q	&kp J	&kp K	&kp X		&kp B	&kp M	&kp W	&kp V	&kp Z
 		&to 1	&kp TAB	&kp BSPC		&kp SPACE	&kp RET	&to 2		

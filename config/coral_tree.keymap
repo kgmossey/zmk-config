@@ -21,8 +21,8 @@
     conditional_layers {
   	compatible = "zmk,conditional-layers";
   	numeric_momentary {
-    	    if-layers = <Main Numpad>;
-            then-layer = <Numlock>;
+    	    if-layers = <Numlock>;
+            then-layer = <Numpad>;
         };
     };
     behaviors {
@@ -85,7 +85,7 @@ AS(SEMI)	&kp Q		&kp J		&kp K		&kp X		/**/	&kp B		&kp M		&kp W		&kp V		&kp Z
                         bindings = <
 &kp ESC		AS(GRAVE)	&kp UP		&none		&kp PG_UP	/**/	&kp STAR	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp MINUS
 &kp TAB		&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN	/**/	&kp FSLH	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp PLUS
-&tog_on Numlock	&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
+&tog Numlock	&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
 				&trans		&kp TAB		&kp BSPC	/**/	&kp DOT		&kp KP_ENTER	&to Main		
                         >;
                 };

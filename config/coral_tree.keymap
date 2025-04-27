@@ -11,7 +11,20 @@
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
+#define Main    0
+#define Numpad  1
+#define Numlock 2
+#define Symbols 3
+#define Bt_rgb  4
+
 / {
+    conditional_layers {
+  	compatible = "zmk,conditional-layers";
+  	numeric_momentary {
+    	    if-layers = <SYM NAV>;
+            then-layer = <NUMPAD>;
+        };
+    };
     behaviors {
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
@@ -57,10 +70,10 @@
 // |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  | 
 //             | Tab | Bck | SPC |   | To2 | Spc | Ret |
    bindings = <
-AS(SQT)	&comma_qmark	&dot_excl	&kp P	&kp Y	/**/	&kp F	&kp G	&kp C	&kp R	&kp L
-&hm LSHIFT A	&hm LCTL O	&hm LALT E	&hm LMETA U	&kp I	/**/	&kp D	&hm RMETA H	&hm RALT T	&hm RCTL N	&hm RSHIFT S
-AS(SEMI)	&kp Q	&kp J	&kp K	&kp X	/**/	&kp B	&kp M	&kp W	&kp V	&kp Z
-		&mo 1	&kp TAB	&kp BSPC	/**/	&kp SPACE	&kp RET	&mo 2		
+AS(SQT)		&comma_qmark	&dot_excl	&kp P		&kp Y		/**/	&kp F		&kp G		&kp C		&kp R		&kp L
+&hm LSHIFT A	&hm LCTL O	&hm LALT E	&hm LMETA U	&kp I		/**/	&kp D		&hm RMETA H	&hm RALT T	&hm RCTL N	&hm RSHIFT S
+AS(SEMI)	&kp Q		&kp J		&kp K		&kp X		/**/	&kp B		&kp M		&kp W		&kp V		&kp Z
+				&mo Numpad	&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&mo Symbols		
                         >;
                 };
                 lower_layer {
@@ -70,24 +83,33 @@ AS(SEMI)	&kp Q	&kp J	&kp K	&kp X	/**/	&kp B	&kp M	&kp W	&kp V	&kp Z
 // | TAB | BTC | BT0 | BT1 | BT3 | /**/ |  =  |  1  |  2  |  3  |  0  |
 //             | non | trn | to0 | /**/ |  .  | trn | RET |
                         bindings = <
-&kp ESC	AS(GRAVE)	&kp UP	&none	&kp PG_UP	/**/	&kp STAR	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp MINUS
-&kp TAB	&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN	/**/	&kp FSLH	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp PLUS
-&tog_on 1	&none	&none	&kp BSLH	&none	/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
-		&mo 1	&kp TAB	&kp BSPC	/**/	&kp DOT	&kp KP_ENTER	&to 0		
+&kp ESC		AS(GRAVE)	&kp UP		&none		&kp PG_UP	/**/	&kp STAR	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp MINUS
+&kp TAB		&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN	/**/	&kp FSLH	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp PLUS
+&tog_on Numlock	&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
+				&trans		&kp TAB		&kp BSPC	/**/	&kp DOT		&kp KP_ENTER	&to Main		
                         >;
                 };
+hold_lower_layer {
+  // Only exists to cause the Mac navigation layer to automatically mutate the regular navigation layer.
+  bindings = <
+  &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+  &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+  &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+                &trans &trans &trans    &trans &trans &trans
+    >;
+  };
                    
-                raise_layer {
+raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  !  |  @  |  #  |  $  |  %  | /**/ |  ^  |  &  |  *  |  (  |  )  |
 // | TAB |  [  |  ]  |  {  |  }  | /**/ |  F1 |  F2 |  F3 |  F4 |  F5 |
 // | non |  -  |  _  |  <  |  >  | /**/ |  F6 |  F7 |  F8 |  F0 | F10 |
 //             | non | trn | non | /**/ | to0 | trn |  ~  |
                         bindings = <
-&kp F1	&kp F2	&kp F3	&kp F4	&kp F5	/**/	&kp F6	&kp F7	&kp F8	&kp F9	&kp F10
-&kp EXCL	&kp AT	&kp HASH	&kp DOLLAR	&kp PERCENT	/**/	&kp CARET	&kp AMPS	&kp STAR	&kp LPAR	&kp RPAR
-&kp TILDE	&kp MINUS	&kp UNDER	&kp LT	&kp GT	/**/	&to 3	&kp LBKT	&kp RBKT	&kp LBRC	&kp RBRC
-		&tog_on 2	&kp TAB	&kp BSPC	/**/	&kp SPACE	&kp RET	&to 0		
+&kp F1		&kp F2		&kp F3		&kp F4		&kp F5		/**/	&kp F6		&kp F7		&kp F8		&kp F9		&kp F10
+&kp EXCL	&kp AT		&kp HASH	&kp DOLLAR	&kp PERCENT	/**/	&kp CARET	&kp AMPS	&kp STAR	&kp LPAR	&kp RPAR
+&kp TILDE	&kp MINUS	&kp UNDER	&kp LT		&kp GT		/**/	&to 4		&kp LBKT	&kp RBKT	&kp LBRC	&kp RBRC
+				&tog_on 2	&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&to 0		
                         >;
                 };
 btrgb_layer {

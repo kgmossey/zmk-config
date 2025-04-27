@@ -21,8 +21,8 @@
     conditional_layers {
   	compatible = "zmk,conditional-layers";
   	numeric_momentary {
-    	    if-layers = <SYM NAV>;
-            then-layer = <NUMPAD>;
+    	    if-layers = <Main Numpad>;
+            then-layer = <Numlock>;
         };
     };
     behaviors {

@@ -51,10 +51,10 @@
 // |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  | 
 //             | Tab | Bck | SPC |   | To2 | Spc | Ret |
    bindings = <
-AS(SQT)	&comma_qmark	&dot_excl	&kp P	&kp Y		&kp F	&kp G	&kp C	&kp R	&kp L
-&hm LSHIFT A	&hm LCTL O	&hm LALT E	&hm LMETA U	&kp I		&kp D	&hm RMETA H	&hm RALT T	&hm RCTL N	&hm RSHIFT S
-&kp SEMI	&kp Q	&kp J	&kp K	&kp X		&kp B	&kp M	&kp W	&kp V	&kp Z
-		&to 1	&kp TAB	&kp BSPC		&kp SPACE	&kp RET	&to 2		
+AS(SQT)	&comma_qmark	&dot_excl	&kp P	&kp Y	/**/	&kp F	&kp G	&kp C	&kp R	&kp L
+&hm LSHIFT A	&hm LCTL O	&hm LALT E	&hm LMETA U	&kp I	/**/	&kp D	&hm RMETA H	&hm RALT T	&hm RCTL N	&hm RSHIFT S
+AS(SEMI)	&kp Q	&kp J	&kp K	&kp X	/**/	&kp B	&kp M	&kp W	&kp V	&kp Z
+		&mo 1	&kp TAB	&kp BSPC	/**/	&kp SPACE	&kp RET	&mo 2		
                         >;
                 };
                 lower_layer {
@@ -64,10 +64,10 @@ AS(SQT)	&comma_qmark	&dot_excl	&kp P	&kp Y		&kp F	&kp G	&kp C	&kp R	&kp L
 // | TAB | BTC | BT0 | BT1 | BT3 | /**/ |  =  |  1  |  2  |  3  |  0  |
 //             | non | trn | to0 | /**/ |  .  | trn | RET |
                         bindings = <
-&kp ESC	&kp GRAVE	&kp UP	&none	&kp PG_UP		&kp STAR	&kp 7	&kp 8	&kp 9	&kp MINUS
-&kp TAB	&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN		&kp FSLH	&kp 4	&kp 5	&kp 6	&kp PLUS
-&bt BT_CLR 	&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3		&kp EQUAL	&kp 1	&kp 2	&kp 3	&kp 0
-		&to 0	&trans	&trans		&kp DOT	&trans	&to 2		
+&kp ESC	AS(GRAVE)	&kp UP	&none	&kp PG_UP	/**/	&kp STAR	&kp 7	&kp 8	&kp 9	&kp MINUS
+&kp TAB	&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN	/**/	&kp FSLH	&kp 4	&kp 5	&kp 6	&kp PLUS
+&to 1	&none	&none	&kp BSLH	&none	/**/	&kp EQUAL	&kp 1	&kp 2	&kp 3	&kp 0
+		&to 0	&kp TAB	&kp BSPC	/**/	&kp DOT	&kp KP_ENTER	&mo 2		
                         >;
                 };
                    
@@ -78,21 +78,20 @@ AS(SQT)	&comma_qmark	&dot_excl	&kp P	&kp Y		&kp F	&kp G	&kp C	&kp R	&kp L
 // | non |  -  |  _  |  <  |  >  | /**/ |  F6 |  F7 |  F8 |  F0 | F10 |
 //             | non | trn | non | /**/ | to0 | trn |  ~  |
                         bindings = <
-&kp EXCL	&kp AT	&kp HASH	&kp DOLLAR	&kp PERCENT		&kp CARET	&kp AMPS	&kp STAR	&kp LPAR	&kp RPAR
-&kp TAB	&kp LBKT	&kp RBKT	&kp LBRC	&kp RBRC		&kp F1	&kp F2	&kp F3	&kp F4	&kp F5
-&kp TILDE	&kp MINUS	&kp UNDER	&kp LT	&kp GT		&kp F6	&kp F7	&kp F8	&kp F9	&kp F10
-		&to 3	&trans	&trans		&kp DOT	&trans	&to 0		
-
+&kp F1	&kp F2	&kp F3	&kp F4	&kp F5	/**/	&kp F6	&kp F7	&kp F8	&kp F9	&kp F10
+&kp EXCL	&kp AT	&kp HASH	&kp DOLLAR	&kp PERCENT	/**/	&kp CARET	&kp AMPS	&kp STAR	&kp LPAR	&kp RPAR
+&kp TILDE	&kp MINUS	&kp UNDER	&kp LT	&kp GT	/**/	&none	&kp LBKT	&kp RBKT	&kp LBRC	&kp RBRC
+		&kp TAB	&to 2	&kp BSPC	/**/	&kp SPACE	&kp RET	&to 3		
                         >;
                 };
 btrgb_layer {
                         bindings = <
-&bt BT_CLR 	&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3		&none	&none	&none	&none	&none
-&none	&none	&none	&none	&none		&none	&none	&none	&none	&none
-&none	&none	&none	&none	&none		&none	&none	&none	&none	&none
-		&to 0	&none	&none		&none	&none	&none		
+&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	/**/	&none	&none	&none	&none	&none
+&to 1	&to 2	&to 3	&none	&none	/**/	&none	&none	&none	&none	&none
+&none	&none	&none	&none	&none	/**/	&none	&none	&none	&none	&bt BT_CLR 
+		&none	&none	&to 0	/**/	&to 0	&none	&none		
 
                         >;
-};
+		};
         };
 };

@@ -75,10 +75,10 @@
     // | ; : |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  | 
     //             | Num | Bck | SPC |   | Fn  | Spc | Ret |
     bindings = <
-        AS(SQT)         &comma_qmark    &dot_excl   &kp P       &kp Y       /**/    &kp F       &kp G       &kp C       &kp R       &kp L
-        &hm LSHIFT A    &hm LCTL O      &hm LALT E  &hm LMETA U &kp I       /**/    &kp D       &hm RMETA H &hm RALT T  &hm RCTL N  &hm RSHIFT S
-        AS(SEMI)        &kp Q           &kp J       &kp K       &kp X       /**/    &kp B       &kp M       &kp W       &kp V       &kp Z
-                                        &mo NumTemp &kp TAB     &kp BSPC    /**/    &kp SPACE   &kp RET     &mo Fn_Sym      
+        AS(SQT)       &comma_qmark  &dot_excl    &kp P        &kp Y     /**/  &kp F      &kp G        &kp C       &kp R       &kp L
+        &hm LSHIFT A  &hm LCTL O    &hm LALT E   &hm LMETA U  &kp I     /**/  &kp D      &hm RMETA H  &hm RALT T  &hm RCTL N  &hm RSHIFT S
+        AS(SEMI)      &kp Q         &kp J        &kp K        &kp X     /**/  &kp B      &kp M        &kp W       &kp V       &kp Z
+                                    &mo NumTemp  &kp TAB      &kp BSPC  /**/  &kp SPACE  &kp RET      &mo Fn_Sym      
         >;
     display-name = "Main";
     };
@@ -90,10 +90,10 @@
     // | TAB | BTC | BT0 | BT1 | BT3 | /**/ |  =  |  1  |  2  |  3  |  0  |
     //             | non | trn | to0 | /**/ |  .  | trn | RET |
     bindings = <
-	&kp ESC		AS(GRAVE)	&kp UP		&none		&kp PG_UP	/**/	&kp STAR	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp MINUS
-	&kp TAB		&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN	/**/	&kp FSLH	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp PLUS
-	&tog Numlock	&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
-					&trans		&kp TAB		&kp BSPC	/**/	&kp DOT		&kp KP_ENTER	&to Main
+        &kp ESC       AS(GRAVE)  &kp UP    &none      &kp PG_UP   /**/  &kp STAR   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp MINUS
+        &kp TAB       &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN   /**/  &kp FSLH   &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp PLUS
+        &tog Numlock  &none      &none     &kp BSLH   &none       /**/  &kp EQUAL  &kp KP_N1     &kp KP_N2  &kp KP_N3  &kp KP_N0
+                                 &trans    &kp TAB    &kp BSPC    /**/  &kp DOT    &kp KP_ENTER  &to Main
     >;
     display-name = "Null";
     };

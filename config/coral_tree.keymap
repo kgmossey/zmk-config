@@ -87,7 +87,7 @@
     bindings = <
 	&kp ESC		AS(GRAVE)	&kp UP		&none		&kp PG_UP	/**/	&kp STAR	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp MINUS
 	&kp TAB		&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN	/**/	&kp FSLH	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp PLUS
-	&tog Numlock	&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
+	&tog Numpad	&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
 					&to Main	&kp TAB		&kp BSPC	/**/	&kp DOT		&kp KP_ENTER	&mo Symbols		
     >;
     //display-name = "Numpad"

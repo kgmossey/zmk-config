@@ -90,7 +90,7 @@
 	&tog 2		&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
 					&trans		&kp TAB		&kp BSPC	/**/	&kp DOT		&kp KP_ENTER	&to Main
     >;
-    display-name = "Numpad"
+    display-name = "Numpad";
     };
 
     hold_lower_layer {

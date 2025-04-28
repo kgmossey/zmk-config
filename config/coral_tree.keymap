@@ -13,20 +13,21 @@
 
 #define Main    0
 #define Numpad  1
-#define Numlock 2
-#define Symbols 3
-#define Bt_rgb  4
+#define NumTemp 2
+#define Numlock 3
+#define Fn_Sym  4
+#define Bt_rgb  5
 
 / {
     conditional_layers {
  	compatible = "zmk,conditional-layers";
   	numeric_momentary {
-    	    if-layers = <2>;
-            then-layer = <1>;
+    	    if-layers = <NumTemp>;
+            then-layer = <Numpad>;
         };
   	numeric_hold {
-    	    if-layers = <3>;
-            then-layer = <1>;
+    	    if-layers = <Numlock>;
+            then-layer = <Numpad>;
         };
     };
     behaviors {
@@ -67,7 +68,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-    default_layer {
+    main_layer {
     // -----------------------------------------------------------------------------------------
     // | ' " | , ? | . ! |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |
     // | A s | O c | E a | U m |  I  |   |  D  | H m | T a | N c | S s |
@@ -77,12 +78,12 @@
 	AS(SQT)		&comma_qmark	&dot_excl	&kp P		&kp Y		/**/	&kp F		&kp G		&kp C		&kp R		&kp L
 	&hm LSHIFT A	&hm LCTL O	&hm LALT E	&hm LMETA U	&kp I		/**/	&kp D		&hm RMETA H	&hm RALT T	&hm RCTL N	&hm RSHIFT S
 	AS(SEMI)	&kp Q		&kp J		&kp K		&kp X		/**/	&kp B		&kp M		&kp W		&kp V		&kp Z
-					&mo 2		&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&mo Symbols		
+					&mo NumTemp	&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&mo Fn_Sym		
         >;
-    display-name = "Dvorak";
+    display-name = "Main";
     };
 
-    numberpad {
+    numpad_layer {
     // -----------------------------------------------------------------------------------------
     // | ESC | GRV |  W  |  E  | p_u | /**/ |  *  |  7  |  8  |  9  |  -  |
     // | TAB |  A  |  S  |  D  | p_d | /**/ |  /  |  4  |  5  |  6  |  +  |
@@ -91,13 +92,13 @@
     bindings = <
 	&kp ESC		AS(GRAVE)	&kp UP		&none		&kp PG_UP	/**/	&kp STAR	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp MINUS
 	&kp TAB		&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN	/**/	&kp FSLH	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp PLUS
-	&tog 3		&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
+	&tog Numlock	&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
 					&trans		&kp TAB		&kp BSPC	/**/	&kp DOT		&kp KP_ENTER	&to Main
     >;
     display-name = "Null";
     };
 
-    temp_lower_layer {
+    numtemp_layer {
     // Only exists to cause the Mac navigation layer to automatically mutate the regular navigation layer.
     bindings = <
   	&trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
@@ -108,7 +109,7 @@
     display-name = "Numpad";
     };
 
-    hold_lower_layer {
+    numlock_layer {
     // Only exists to cause the Mac navigation layer to automatically mutate the regular navigation layer.
     bindings = <
   	&trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
@@ -119,7 +120,7 @@
     display-name = "Numlock";
     };
                    
-    function_keys {
+    fn_sym_layer {
     // -----------------------------------------------------------------------------------------
     // |  !  |  @  |  #  |  $  |  %  | /**/ |  ^  |  &  |  *  |  (  |  )  |
     // | TAB |  [  |  ]  |  {  |  }  | /**/ |  F1 |  F2 |  F3 |  F4 |  F5 |
@@ -129,7 +130,7 @@
 	&kp F1		&kp F2		&kp F3		&kp F4		&kp F5		/**/	&kp F6		&kp F7		&kp F8		&kp F9		&kp F10
 	&kp EXCL	&kp AT		&kp HASH	&kp DOLLAR	&kp PERCENT	/**/	&kp CARET	&kp AMPS	&kp STAR	&kp LPAR	&kp RPAR
 	&kp TILDE	&kp MINUS	&kp UNDER	&kp LT		&kp GT		/**/	&to 4		&kp LBKT	&kp RBKT	&kp LBRC	&kp RBRC
-					&tog_on 2	&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&to 0		
+					&to Bt_rgb	&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&to Main		
     >;
     display-name = "Fn keys";
     };
@@ -139,7 +140,7 @@
 	&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	/**/	&rgb_ug RGB_ON	&rgb_ug RGB_HUI	&rgb_ug RGB_SAI	&rgb_ug RGB_BRI	&rgb_ug RGB_SPI
 	&to 1		&to 2		&to 3		&to 4		&to 5		/**/	&rgb_ug RGB_OFF	&rgb_ug RGB_HUD	&rgb_ug RGB_SAD	&rgb_ug RGB_BRD	&rgb_ug RGB_SPD
 	&none		&none		&none		&none		&none		/**/	&rgb_ug RGB_EFF	&rgb_ug RGB_EFR	&none		&none		&bt BT_CLR 
-					&none		&none		&to 0		/**/	&to 0		&none		&none		
+					&none		&none		&to Main		/**/	&to 0		&none		&none		
     >;
     display-name = "BT & RGB";
     };

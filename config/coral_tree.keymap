@@ -73,7 +73,7 @@
 	AS(SQT)		&comma_qmark	&dot_excl	&kp P		&kp Y		/**/	&kp F		&kp G		&kp C		&kp R		&kp L
 	&hm LSHIFT A	&hm LCTL O	&hm LALT E	&hm LMETA U	&kp I		/**/	&kp D		&hm RMETA H	&hm RALT T	&hm RCTL N	&hm RSHIFT S
 	AS(SEMI)	&kp Q		&kp J		&kp K		&kp X		/**/	&kp B		&kp M		&kp W		&kp V		&kp Z
-					&mo 0		&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&mo Symbols		
+					&mo 2		&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&mo Symbols		
         >;
     //display-name = "Dvorak";
     };

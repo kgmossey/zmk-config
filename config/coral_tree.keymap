@@ -75,7 +75,7 @@
 	AS(SEMI)	&kp Q		&kp J		&kp K		&kp X		/**/	&kp B		&kp M		&kp W		&kp V		&kp Z
 					&mo 1		&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&mo Symbols		
         >;
-    //display-name = "Dvorak";
+    display-name = "Dvorak";
     };
 
     numberpad {
@@ -90,7 +90,7 @@
 	&tog 2		&none		&none		&kp BSLH	&none		/**/	&kp EQUAL	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_N0
 					&trans		&kp TAB		&kp BSPC	/**/	&kp DOT		&kp KP_ENTER	&to Main
     >;
-    //display-name = "Numpad"
+    display-name = "Numpad"
     };
 
     hold_lower_layer {
@@ -101,7 +101,7 @@
   	&trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
         	      &trans &trans &trans    &trans &trans &trans
     >;
-    //display-name = "Numlock";
+    display-name = "Numlock";
     };
                    
     function_keys {
@@ -116,7 +116,7 @@
 	&kp TILDE	&kp MINUS	&kp UNDER	&kp LT		&kp GT		/**/	&to 4		&kp LBKT	&kp RBKT	&kp LBRC	&kp RBRC
 					&tog_on 2	&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&to 0		
     >;
-    //display-name = "Fn keys";
+    display-name = "Fn keys";
     };
 
     btrgb_layer {
@@ -126,7 +126,7 @@
 	&none		&none		&none		&none		&none		/**/	&rgb_ug RGB_EFF	&rgb_ug RGB_EFR	&none		&none		&bt BT_CLR 
 					&none		&none		&to 0		/**/	&to 0		&none		&none		
     >;
-    //display-name = "BT & RGB";
+    display-name = "BT & RGB";
     };
 
   };

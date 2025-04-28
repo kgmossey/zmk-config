@@ -71,14 +71,14 @@
     main_layer {
     // -----------------------------------------------------------------------------------------
     // | ' " | , ? | . ! |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |
-    // | A s | O c | E a | U m |  I  |   |  D  | H m | T a | N c | S s |
-    // |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  | 
-    //             | Tab | Bck | SPC |   | To2 | Spc | Ret |
+    // | s A | c O | a E | m U |  I  |   |  D  | m H | a T | c N | s S |
+    // | ; : |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  | 
+    //             | Num | Bck | SPC |   | Fn  | Spc | Ret |
     bindings = <
-	AS(SQT)		&comma_qmark	&dot_excl	&kp P		&kp Y		/**/	&kp F		&kp G		&kp C		&kp R		&kp L
-	&hm LSHIFT A	&hm LCTL O	&hm LALT E	&hm LMETA U	&kp I		/**/	&kp D		&hm RMETA H	&hm RALT T	&hm RCTL N	&hm RSHIFT S
-	AS(SEMI)	&kp Q		&kp J		&kp K		&kp X		/**/	&kp B		&kp M		&kp W		&kp V		&kp Z
-					&mo NumTemp	&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&mo Fn_Sym		
+        AS(SQT)         &comma_qmark    &dot_excl   &kp P       &kp Y       /**/    &kp F       &kp G       &kp C       &kp R       &kp L
+        &hm LSHIFT A    &hm LCTL O      &hm LALT E  &hm LMETA U &kp I       /**/    &kp D       &hm RMETA H &hm RALT T  &hm RCTL N  &hm RSHIFT S
+        AS(SEMI)        &kp Q           &kp J       &kp K       &kp X       /**/    &kp B       &kp M       &kp W       &kp V       &kp Z
+                                        &mo NumTemp &kp TAB     &kp BSPC    /**/    &kp SPACE   &kp RET     &mo Fn_Sym      
         >;
     display-name = "Main";
     };

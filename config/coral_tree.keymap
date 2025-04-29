@@ -73,7 +73,7 @@
     // | ' " | , ? | . ! |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |
     // | s A | c O | a E | m U |  I  |   |  D  | m H | a T | c N | s S |
     // | ; : |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  | 
-    //             | Num | Bck | SPC |   | Fn  | Spc | Ret |
+    //             | Num | Tab | Bck |   | Fn  | Spc | Ret |
     bindings = <
         AS(SQT)       &comma_qmark  &dot_excl    &kp P        &kp Y     /**/  &kp F      &kp G        &kp C       &kp R       &kp L
         &hm LSHIFT A  &hm LCTL O    &hm LALT E   &hm LMETA U  &kp I     /**/  &kp D      &hm RMETA H  &hm RALT T  &hm RCTL N  &hm RSHIFT S
@@ -85,10 +85,10 @@
 
     numpad_layer {
     // -----------------------------------------------------------------------------------------
-    // | ESC | GRV |  W  |  E  | p_u | /**/ |  *  |  7  |  8  |  9  |  -  |
-    // | TAB |  A  |  S  |  D  | p_d | /**/ |  /  |  4  |  5  |  6  |  +  |
-    // | TAB | BTC | BT0 | BT1 | BT3 | /**/ |  =  |  1  |  2  |  3  |  0  |
-    //             | non | trn | to0 | /**/ |  .  | trn | RET |
+    // | ESC | GRV |  Up | non | p_u | /**/ |  *  |  7  |  8  |  9  |  -  |
+    // | TAB | Lef | Dwn | Rgt | p_d | /**/ |  /  |  4  |  5  |  6  |  +  | 
+    // |Lshft| Lalt|Lctrl| NumL|  \  | /**/ |  =  |  1  |  2  |  3  |  0  |
+    //             | Fn  |Lmeta| Bck | /**/ |  .  | trn | RET |
     bindings = <
         &kp ESC       AS(GRAVE)  &kp UP    &none      &kp PG_UP   /**/  &kp STAR   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp MINUS
         &kp TAB       &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN   /**/  &kp FSLH   &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp PLUS
@@ -122,15 +122,15 @@
                    
     fn_sym_layer {
     // -----------------------------------------------------------------------------------------
+    // |  F1 |  F2 |  F3 |  F4 |  F5 | /**/ |  F6 |  F7 |  F8 |  F0 | F10 |
     // |  !  |  @  |  #  |  $  |  %  | /**/ |  ^  |  &  |  *  |  (  |  )  |
-    // | TAB |  [  |  ]  |  {  |  }  | /**/ |  F1 |  F2 |  F3 |  F4 |  F5 |
-    // | non |  -  |  _  |  <  |  >  | /**/ |  F6 |  F7 |  F8 |  F0 | F10 |
-    //             | non | trn | non | /**/ | to0 | trn |  ~  |
+    // |  ~  |  -  |  _  |  <  |  >  | /**/ | non |  [  |  ]  |  {  |  }  |
+    //             | ToBt| Tab | Bck | /**/ | SPC | RET | ToM |
     bindings = <
-	&kp F1		&kp F2		&kp F3		&kp F4		&kp F5		/**/	&kp F6		&kp F7		&kp F8		&kp F9		&kp F10
-	&kp EXCL	&kp AT		&kp HASH	&kp DOLLAR	&kp PERCENT	/**/	&kp CARET	&kp AMPS	&kp STAR	&kp LPAR	&kp RPAR
-	&kp TILDE	&kp MINUS	&kp UNDER	&kp LT		&kp GT		/**/	&to 4		&kp LBKT	&kp RBKT	&kp LBRC	&kp RBRC
-					&to Bt_rgb	&kp TAB		&kp BSPC	/**/	&kp SPACE	&kp RET		&to Main		
+        &kp F1      &kp F2     &kp F3      &kp F4      &kp F5       /**/  &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
+        &kp EXCL    &kp AT     &kp HASH    &kp DOLLAR  &kp PERCENT  /**/  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
+        &kp TILDE   &kp MINUS  &kp UNDER   &kp LT      &kp GT       /**/  &none      &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC
+                               &to Bt_rgb  &kp TAB     &kp BSPC     /**/  &kp SPACE  &kp RET   &to Main        
     >;
     display-name = "Fn keys";
     };

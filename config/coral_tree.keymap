@@ -85,15 +85,15 @@
 
     numpad_layer {
     // -----------------------------------------------------------------------------------------
-    // | ESC | GRV |  Up | M(D)| p_u | /**/ |  *  |  7  |  8  |  9  |  -  |
-    // | TAB | Lef | Dwn | Rgt | p_d | /**/ |  /  |  4  |  5  |  6  |  +  | 
+    // | ESC | GRV |  Up | M(B)| p_u | /**/ |  *  |  7  |  8  |  9  |  -  |
+    // | TAB | Lef | Dwn | Rgt | p_d | /**/ |  /  |  4  |  5  |  6  |  +  | LG(DEL)
     // |Lshft| Lalt|Lctrl| NumL|  \  | /**/ |  =  |  1  |  2  |  3  |  0  |
     //             | Fn  |Lmeta| Bck | /**/ |  .  | trn | RET |
     bindings = <
-        &kp ESC      AS(GRAVE)  &kp UP      &kp LG(DEL)   &kp PG_UP  /**/  &kp STAR   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp MINUS
+        &kp ESC      AS(GRAVE)  &kp UP      &kp LG(BSPC)  &kp PG_UP  /**/  &kp STAR   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp MINUS
         &kp LG(TAB)  &kp LEFT   &kp DOWN    &kp RIGHT     &kp PG_DN  /**/  &kp FSLH   &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp PLUS
         &kp LSHFT    &kp LALT   &kp LCTRL   &tog Numlock  &kp BSLH   /**/  &kp EQUAL  &kp KP_N1     &kp KP_N2  &kp KP_N3  &kp KP_N0
-                              &mo Fn_Sym  &kp LMETA     &kp BSPC   /**/  &kp DOT    &kp KP_ENTER  &to Main        
+                                &mo Fn_Sym  &kp LMETA     &kp BSPC   /**/  &kp DOT    &kp KP_ENTER  &to Main        
     >;
     display-name = "Null";
     };

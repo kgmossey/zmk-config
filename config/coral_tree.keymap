@@ -22,8 +22,11 @@
     macros {
         change_bt: change_bt {
             compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>; // Must be 1
-            bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <$to Main>;
+            #binding-cells = <1>; 
+            bindings = <&macro_param_1to1> 
+                     , <&bt BT_SEL MACRO_PLACEHOLDER>
+                     , <$to Main>
+                     ;
         };
     };
     conditional_layers {
@@ -149,7 +152,7 @@
     // | non | non | non | non | non | /**/ | non |  [  |  ]  |  {  |  }  |
     //             | non | non | ToM | /**/ | SPC | RET | ToM |
     bindings = <
-        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  /**/  &rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI
+        &change_bt 0  &change_bt 1  &change_bt 2  &change_bt 3  &change_bt 4  /**/  &rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI
         &to 1         &to 2         &to 3         &to 4         &to 5         /**/  &rgb_ug RGB_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD
         &kp LNLCK     &none         &none         &none         &none         /**/  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none            &none            &bt BT_CLR 
                                     &none         &none         &to Main      /**/  &to Main         &none            &none       

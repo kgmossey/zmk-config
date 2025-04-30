@@ -19,14 +19,21 @@
 #define Bt_rgb  5
 
 / {
+    macros {
+        change_bt: change_bt {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>; // Must be 1
+            bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <$to Main>;
+        };
+    };
     conditional_layers {
- 	compatible = "zmk,conditional-layers";
-  	numeric_momentary {
-    	    if-layers = <NumTemp>;
+        compatible = "zmk,conditional-layers";
+        numeric_momentary {
+            if-layers = <NumTemp>;
             then-layer = <Numpad>;
         };
-  	numeric_hold {
-    	    if-layers = <Numlock>;
+        numeric_hold {
+            if-layers = <Numlock>;
             then-layer = <Numpad>;
         };
     };

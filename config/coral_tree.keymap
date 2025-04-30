@@ -25,7 +25,7 @@
             #binding-cells = <1>; 
             bindings = <&macro_param_1to1> 
                      , <&bt BT_SEL MACRO_PLACEHOLDER>
-                     , <$to Main>
+                     , <&to Main>
                      ;
         };
     };

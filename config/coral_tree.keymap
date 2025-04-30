@@ -21,9 +21,9 @@
 / {
     macros {
         change_bt: change_bt {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>; 
-            bindings = <&macro_param_1to1> 
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>; 
+            bindings = <&macro_param_1to2> 
                      , <&bt BT_SEL MACRO_PLACEHOLDER>
                      , <&to Main>
                      ;
